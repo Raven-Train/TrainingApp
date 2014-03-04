@@ -1,9 +1,12 @@
 dataSource {
-    pooled = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
-}
+            dbCreate = "update"
+            driverClassName = "com.mysql.jdbc.Driver"
+            dialect=org.hibernate.dialect.MySQL5Dialect
+            username = "raven"
+            password = "raven"
+            url = "jdbc:mysql://localhost/trainingapp?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
+            pooled = true
+        }
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = false
