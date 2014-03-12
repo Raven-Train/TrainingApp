@@ -1,12 +1,12 @@
 package uk.ac.shu.webarch.trainingapp
 
 class Exercise {
-	string exerciseName
+	String exerciseName
 	int percentage
 	int improvement
 	int goalWeight
-	string bodyPart
-	string equipment
+	String bodyPart
+	String equipment
 	
     static constraints = {
 	
