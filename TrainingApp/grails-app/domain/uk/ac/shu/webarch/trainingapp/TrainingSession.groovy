@@ -6,9 +6,13 @@ class TrainingSession {
 	String sessionID;
 	User username;
 	Date date;
-	
-	static mappedBy = [classes: 'sessionID']
+	Set sessionExercise
 
+
+	static hasMany = [sessionExercise: Sessionexercise]
+	static mappedBy = [sessionExercise: 'sessionID']
+
+		
     static constraints = {
 
 	

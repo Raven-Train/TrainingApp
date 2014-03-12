@@ -6,10 +6,12 @@ class User
 	String gender
 	int    height 
 	Float  Weight
+	Set trainingSessions 	
 
-	static mappedBy = [classes: 'username']
-	static hasMany = [classes: TrainingSession]
-	
+
+
+	static hasMany = [trainingSessions: TrainingSession]
+	static mappedBy = [trainingSessions: 'sessionID']	
 	
     static constraints = 
 	{
