@@ -1,6 +1,6 @@
 package uk.ac.shu.webarch.trainingapp
 
-class User 
+class User { 
 
 	String username
 	String gender
@@ -11,7 +11,7 @@ class User
 
 
 	static hasMany = [trainingSessions: TrainingSession]
-	static mappedBy = [trainingSessions: 'sessionID']	
+	static mappedBy = [trainingSessions: 'username']	
 	
     static constraints = 
 	{
