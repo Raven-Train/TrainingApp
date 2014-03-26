@@ -3,8 +3,8 @@ package uk.ac.shu.webarch.trainingapp
 class TrainingSession {
 
 	String sessionID;
-	User username;
-	Date date;
+	User username
+	Date date
 	Set sessionExercise
 
 

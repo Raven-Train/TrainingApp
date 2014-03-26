@@ -5,15 +5,21 @@ class User {
 	String username
 	String gender
 	int    height 
-	Float  Weight
+	Float  weight
 	Set trainingSessions 	
-
+	
+	static mapping = 
+	{
+		weight column: "weight", sqlType: "decimal", precision: 4, scale: 1
+	} 
 
 
 	static hasMany = [trainingSessions: TrainingSession]
 	static mappedBy = [trainingSessions: 'username']	
-	
-    static constraints = 
+
+    	static constraints = 
 	{
+		gender(inList:["Male", "Female"])
+				
         }
 }

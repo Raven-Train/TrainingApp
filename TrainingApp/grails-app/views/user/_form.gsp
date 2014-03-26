@@ -7,7 +7,7 @@
 		<g:message code="user.gender.label" default="Gender" />
 		
 	</label>
-	<g:textField name="gender" value="${userInstance?.gender}"/>
+	<g:select name="gender" from="${userInstance.constraints.gender.inList}" value="${userInstance?.gender}" valueMessagePrefix="user.gender" noSelection="['': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'height', 'error')} required">

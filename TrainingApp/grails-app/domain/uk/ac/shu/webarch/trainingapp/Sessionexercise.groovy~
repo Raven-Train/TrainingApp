@@ -5,7 +5,7 @@ class Sessionexercise {
 	int reps
 	int weights
 	int setNo
-	TrainingSession sessionID
+	TrainingSession id
 	Exercise exerciseName
 	
 
