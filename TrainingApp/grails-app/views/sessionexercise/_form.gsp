@@ -23,7 +23,7 @@
 		<g:message code="sessionexercise.sessionID.label" default="Session ID" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="sessionID" name="sessionID.id" from="${uk.ac.shu.webarch.trainingapp.TrainingSession.list()}" optionKey="id" required="" value="${sessionexerciseInstance?.sessionID?.id}" class="many-to-one"/>
+	<g:select id="sessionID" name="sessionID.id" from="${uk.ac.shu.webarch.trainingapp.Trainingsession.list()}" optionKey="id" required="" value="${sessionexerciseInstance?.sessionID?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: sessionexerciseInstance, field: 'setNo', 'error')} required">
@@ -34,11 +34,11 @@
 	<g:field name="setNo" type="number" value="${sessionexerciseInstance.setNo}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: sessionexerciseInstance, field: 'weights', 'error')} required">
-	<label for="weights">
-		<g:message code="sessionexercise.weights.label" default="Weights" />
+<div class="fieldcontain ${hasErrors(bean: sessionexerciseInstance, field: 'weight', 'error')} required">
+	<label for="weight">
+		<g:message code="sessionexercise.weight.label" default="Weight" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="weights" type="number" value="${sessionexerciseInstance.weights}" required=""/>
+	<g:field name="weight" type="number" value="${sessionexerciseInstance.weight}" required=""/>
 </div>
 

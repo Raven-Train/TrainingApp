@@ -14,7 +14,7 @@ class User {
 	} 
 
 
-	static hasMany = [trainingSessions: TrainingSession]
+	static hasMany = [trainingSessions: Trainingsession]
 	static mappedBy = [trainingSessions: 'username']	
 
     	static constraints = 

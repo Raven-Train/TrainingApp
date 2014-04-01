@@ -46,7 +46,7 @@
 					<span id="trainingSessions-label" class="property-label"><g:message code="user.trainingSessions.label" default="Training Sessions" /></span>
 					
 						<g:each in="${userInstance.trainingSessions}" var="t">
-						<span class="property-value" aria-labelledby="trainingSessions-label"><g:link controller="trainingSession" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="trainingSessions-label"><g:link controller="trainingsession" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>

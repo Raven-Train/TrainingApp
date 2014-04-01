@@ -1,6 +1,6 @@
 package uk.ac.shu.webarch.trainingapp
 
-class TrainingSession {
+class Trainingsession {
 
 	String sessionID;
 	User username

@@ -45,7 +45,7 @@
 				<li class="fieldcontain">
 					<span id="sessionID-label" class="property-label"><g:message code="sessionexercise.sessionID.label" default="Session ID" /></span>
 					
-						<span class="property-value" aria-labelledby="sessionID-label"><g:link controller="trainingSession" action="show" id="${sessionexerciseInstance?.sessionID?.id}">${sessionexerciseInstance?.sessionID?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="sessionID-label"><g:link controller="trainingsession" action="show" id="${sessionexerciseInstance?.sessionID?.id}">${sessionexerciseInstance?.sessionID?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -59,11 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${sessionexerciseInstance?.weights}">
+				<g:if test="${sessionexerciseInstance?.weight}">
 				<li class="fieldcontain">
-					<span id="weights-label" class="property-label"><g:message code="sessionexercise.weights.label" default="Weights" /></span>
+					<span id="weight-label" class="property-label"><g:message code="sessionexercise.weight.label" default="Weight" /></span>
 					
-						<span class="property-value" aria-labelledby="weights-label"><g:fieldValue bean="${sessionexerciseInstance}" field="weights"/></span>
+						<span class="property-value" aria-labelledby="weight-label"><g:fieldValue bean="${sessionexerciseInstance}" field="weight"/></span>
 					
 				</li>
 				</g:if>

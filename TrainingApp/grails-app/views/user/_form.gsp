@@ -26,10 +26,10 @@
 	
 <ul class="one-to-many">
 <g:each in="${userInstance?.trainingSessions?}" var="t">
-    <li><g:link controller="trainingSession" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></li>
+    <li><g:link controller="trainingsession" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:link controller="trainingSession" action="create" params="['user.id': userInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'trainingSession.label', default: 'TrainingSession')])}</g:link>
+<g:link controller="trainingsession" action="create" params="['user.id': userInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'trainingsession.label', default: 'Trainingsession')])}</g:link>
 </li>
 </ul>
 

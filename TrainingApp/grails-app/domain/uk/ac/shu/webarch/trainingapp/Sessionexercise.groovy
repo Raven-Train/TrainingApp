@@ -3,9 +3,9 @@ package uk.ac.shu.webarch.trainingapp
 class Sessionexercise {
 
 	int reps
-	int weights
+	int weight
 	int setNo
-	TrainingSession sessionID
+	Trainingsession sessionID
 	Exercise exerciseName
 	
 

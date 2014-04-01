@@ -32,7 +32,7 @@
 					
 						<g:sortableColumn property="setNo" title="${message(code: 'sessionexercise.setNo.label', default: 'Set No')}" />
 					
-						<g:sortableColumn property="weights" title="${message(code: 'sessionexercise.weights.label', default: 'Weights')}" />
+						<g:sortableColumn property="weight" title="${message(code: 'sessionexercise.weight.label', default: 'Weight')}" />
 					
 					</tr>
 				</thead>
@@ -48,7 +48,7 @@
 					
 						<td>${fieldValue(bean: sessionexerciseInstance, field: "setNo")}</td>
 					
-						<td>${fieldValue(bean: sessionexerciseInstance, field: "weights")}</td>
+						<td>${fieldValue(bean: sessionexerciseInstance, field: "weight")}</td>
 					
 					</tr>
 				</g:each>
