@@ -117,8 +117,7 @@ log4j = {
 //Spring security password constraints
 grails.plugin.springsecurity.ui.password.minLength =5
 grails.plugin.springsecurity.ui.password.minLength =64
-grails.plugin.springsecurity.ui.password.validationRegex = '^.*$'
-
+//grails.plugin.springsecurity.ui.password.validationRegex = '^.*$' -not needed
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'uk.ac.shu.webarch.trainingapp.AuthUsers'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'uk.ac.shu.webarch.trainingapp.AuthUsersRole'
@@ -130,7 +129,9 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/**/favicon.ico':                ['permitAll'],
+	'/register':                      ['permitAll'],
+        '/register/**':                   ['permitAll']
 ]
 //attach e-mail to spring security
 grails.plugin.springsecurity.securityConfigType = "Annotation"

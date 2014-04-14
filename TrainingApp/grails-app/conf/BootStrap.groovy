@@ -18,17 +18,20 @@ class BootStrap {
                           password: 'admin',
                           display: 'Admin',
                           email: 'admin@localhost.localdomain',
-                          enabled: true).save(failOnError: true)
+                          enabled: true,
+                          weight:0.0,
+                          height:0,
+                          gender:'Male').save(failOnError: true)
       }
 
       if (!adminUser.authorities.contains(adminRole)) {
         log.debug("Granting admin user admin role");
-        UserRole.create adminUser, adminRole
+        AuthUsersRole.create adminUser, adminRole
       }
 
       if (!adminUser.authorities.contains(userRole)) {
         log.debug("Granting admin user user role");
-        UserRole.create adminUser, userRole
+        AuthUsersRole.create adminUser, userRole
       }
     }
         
