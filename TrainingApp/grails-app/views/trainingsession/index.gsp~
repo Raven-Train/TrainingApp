@@ -39,7 +39,7 @@
 						<td><g:link action="show" id="${trainingsessionInstance.id}">${fieldValue(bean: trainingsessionInstance, field: "date")}</g:link></td>
 					
 						<td>${fieldValue(bean: trainingsessionInstance, field: "sessionID")}</td>
-						
+					
 						<td>${trainingsessionInstance.username.username}</td>
 					
 					</tr>
