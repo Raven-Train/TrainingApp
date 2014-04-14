@@ -8,16 +8,18 @@ class User {
 	Float  weight
 	Set trainingSessions 	
 	
-	static mapping = {
+	static mapping = 
+	{
 		weight column: "weight", sqlType: "decimal", precision: 4, scale: 1
-		} 
+	} 
 
 
-	static hasMany = [trainingSessions: TrainingSession]
+	static hasMany = [trainingSessions: Trainingsession]
 	static mappedBy = [trainingSessions: 'username']	
 
-    static constraints = 
+    	static constraints = 
 	{
+		gender(inList:["Male", "Female"])
 				
         }
 }
