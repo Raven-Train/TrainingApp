@@ -1,8 +1,8 @@
 package uk.ac.shu.webarch.trainingapp
 
-class User { 
+class User extends AuthUsers { 
 	// Declare variables for user data
-	String username
+	
 	String gender
 	int    height 
 	Float  weight

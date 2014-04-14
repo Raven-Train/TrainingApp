@@ -40,6 +40,8 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
+//spring security authentication plugin
+	mavenRepo "http://repo.spring.io/milestone/"
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -54,6 +56,10 @@ grails.project.dependency.resolution = {
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.47"
+
+	//plugin for spring security authentication
+	compile ':spring-security-core:2.0-RC2'
+	compile ":spring-security-ui:1.0-RC1"
 
         // plugins for the compile step
         compile ":scaffolding:2.0.1"

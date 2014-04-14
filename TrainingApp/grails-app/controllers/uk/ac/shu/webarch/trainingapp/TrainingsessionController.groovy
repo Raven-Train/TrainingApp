@@ -4,11 +4,16 @@ package uk.ac.shu.webarch.trainingapp
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+//security plugin -
+import grails.plugin.springsecurity.annotation.Secured
+
 
 @Transactional(readOnly = true)
 class TrainingsessionController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+//User can view/edit page only if logged in or remembered
+	@Secured(['ROLE_USER','IS_AUTHENTICATED_REMEMBERED'])
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)

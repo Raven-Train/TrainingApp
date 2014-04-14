@@ -113,3 +113,31 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+//Spring security password constraints
+grails.plugin.springsecurity.ui.password.minLength =5
+grails.plugin.springsecurity.ui.password.minLength =64
+grails.plugin.springsecurity.ui.password.validationRegex = '^.*$'
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'uk.ac.shu.webarch.trainingapp.AuthUsers'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'uk.ac.shu.webarch.trainingapp.AuthUsersRole'
+grails.plugin.springsecurity.authority.className = 'uk.ac.shu.webarch.trainingapp.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+//attach e-mail to spring security
+grails.plugin.springsecurity.securityConfigType = "Annotation"
+	grails.plugin.springsecurity.logout.postOnly = false
+	grails.plugin.springsecurity.ui.register.emailFrom = "demo<no-reply@localhost.localdomain>"
+	grails.plugin.springsecurity.ui.register.emailSubject = 'Welcome to demoapp'
+	grails.plugin.springsecurity.ui.register.defaultRoleNames = [
+	        "ROLE_USER"
+	]
+

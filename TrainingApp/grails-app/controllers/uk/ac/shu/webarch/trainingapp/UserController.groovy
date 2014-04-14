@@ -4,12 +4,15 @@ package uk.ac.shu.webarch.trainingapp
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+//import security plugin-
+import grails.plugin.springsecurity.annotation.Secured
 
 @Transactional(readOnly = true)
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+//User can view/edit page whether logged in or not
+	@Secured(['ROLE_USER','IS_AUTHENTICATED_ANONYMOUSLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond User.list(params), model:[userInstanceCount: User.count()]
