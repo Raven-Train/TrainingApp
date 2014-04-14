@@ -40,6 +40,6 @@
 		<g:message code="trainingsession.username.label" default="Username" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="username" name="username.id" from="${uk.ac.shu.webarch.trainingapp.User.list()}" optionKey="id" required="" value="${trainingsessionInstance?.username?.username}" class="many-to-one"/>
+	<g:select id="username" name="username.id" from="${uk.ac.shu.webarch.trainingapp.User.list()}" optionKey="id" required="" value="${user.username}" class="many-to-one"/>
 </div>
 
