@@ -3,7 +3,7 @@ TrainingApp
 
 This application is designed to record and track the user's gym session. It stores data on sessions and the exercises performed within them.
 
-Created with Grails
+Created with Grails. Runs on a LAMP server with Grails installed.
 
 The application requires a database in mysql named trainingapp with username and password both set to 'raven'.
 The mySQL statements to create the db is (after logging into mySQL as root):
