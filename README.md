@@ -11,4 +11,8 @@ The mySQL statements to create the db is (after logging into mySQL as root):
 create database trainingapp default charset utf8;
 grant all on trainingapp.* to 'raven'@'localhost' identified by 'raven';
 
-The application will create tables and relationships when it is started. If you want to create your own db name then do so but you must modify conf/DataSource.groovy to reflect the changes.
+The application will create tables and relationships when it is started. If you want to change the username and password for the database edit conf/DataSource.groovy line 16 and 17. 
+
+http://gvmtool.net/ - This link provides information on how to install Grails version manager for installing and maintaining grails. 
+
+https://www.linux.com/learn/tutorials/288158-easy-lamp-server-installation - This link provides information on how to install a lamp server. 
