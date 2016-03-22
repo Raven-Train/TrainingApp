@@ -1,5 +1,6 @@
 TrainingApp
 ===========
+Runs on a LAMP (Linux Apache MySQL PHP) server with Grails installed. Though we believe that with some modificatio of files it should work on alternative server stacks.
 
 This application is designed to record and track the user's gym session. It stores data on sessions and the exercises performed within them.
 
